@@ -1,0 +1,46 @@
+{% extends "person_site/base.html" %}
+{% block content %}
+
+    <div class="jumbotron">
+        <h1>Личный сайт Виталия Куценко</h1>
+        <p>
+            Много-много текста обо мне... Так вы наверняка подумали попав сюда. Но это не так, непосредствено обо мне
+            можно почитать с соответствующем разделе с моим CV.
+        </p>
+        <p>
+            На этом сайте я хвастаюсь проектами (из тех что не под NDA), выкладываю статьи имеющие отношение напрямую к работе,
+            которую я выполняю, или к тому что мне интересно. Планов громадье, будем развиваться и решать вопросы по ходу
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Последние статьи из блога</h1>
+        </div>
+        <div class="row">
+            {% for article in articles %}
+                <div class="col-md-4">
+                    <h2>{{ article.label }}</h2>
+                    <p>{{ article.description }}</p>
+                    <p><a class="btn btn-default" href="{% url 'person_site:article' article.id %}" role="button">Подробности »</a></p>
+                </div>
+            {% empty %}
+                <p>В настоящий момент в блог не добавленно ни одной статьи</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Проекты</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Портал СПО</h2>
+                <p>Портал СПО, развернут в Нефтеюганском Политехническом колледже</p>
+                <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

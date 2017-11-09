@@ -1,0 +1,16 @@
+{% extends "person_site/base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Новая статья</h1>
+        </div>
+    </div>
+    <div class="row">
+        <form action="{% url 'person_site:new_article'%}" method='post'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name='submit'>Добавить запись</button>
+        </form>
+    </div>
+
+{% endblock %}

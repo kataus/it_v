@@ -1,0 +1,28 @@
+{% extends "person_site/base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Управление статьями блога</h1>
+        </div>
+    </div>
+    <div class="row">
+        <a class="btn btn-primary" href="{% url 'person_site:new_article' %}">Добавить новую статью</a>
+    </div>
+    <div class="row">
+        {% for article in articles %}
+            <div class="col-md-12">
+                <h2>
+                    {{ article.label }}
+                    <span class="glyphicon glyphicon-pencil text-successb"></span>
+                    <span class="glyphicon glyphicon-trash text-danger"></span>
+                </h2>
+                <p>{{ article.date_added|date:'d m, Y H:i'}}
+                <p>{{ article.description }}</p>
+                <p><a class="btn btn-default" href="{% url 'person_site:article' article.id %}" role="button">Подробности »</a></p>
+            </div>
+        {% empty %}
+            <p>В настоящий момент в блог не добавленно ни одной статьи</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
