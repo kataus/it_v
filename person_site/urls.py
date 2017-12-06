@@ -9,4 +9,7 @@ urlpatterns = [
     url(r'^articles/$', views.articles, name='articles'),
     url(r'^articles/new_article/$', views.new_article, name='new_article'),
     url(r'^article/(?P<article_id>\d+)/$', views.article, name='article'),
+    url(r'^cv/$', views.cv, name='cv'),
+    url(r'^projects/$', views.projects, name='projects'),
+
 ]

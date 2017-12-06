@@ -1,0 +1,90 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+
+}
+
+
+/*$navbar-default-bg:#283e4a;*/
+/*$navbar-inverse-color:#c7d1d8;*/
+/*$navbar-inverse-brand-hover-color:#c7d1d8;*/
+/*$navbar-inverse-link-color:#c7d1d8;*/
+
+
+body.itvitality .navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2.5ex;
+}
+
+
+@media (min-width: 769px) {
+  body.itvitality > .navbar {
+    min-height: 100px;
+  }
+  body.itvitality a.navbar-brand{
+    line-height: 70px;
+  }
+  body.itvitality a.navbar-brand .logo {
+    height: 70px;
+    float: left;
+  }
+  body.itvitality .navbar-brand {
+    font-size: 2.5ex;
+    height: 100px;
+  }
+  body.itvitality a.navbar-brand .logo-label {
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+  body.itvitality .navbar .navbar-nav {
+    padding-top: 50px;
+  }
+
+  body.itvitality .navbar .navbar-nav img.facebook {
+    width: 30px;
+    margin-top: -6px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.itvitality > .navbar {
+    min-height: 50px;
+  }
+  body.itvitality a.navbar-brand{
+    line-height: 34px;
+  }
+  body.itvitality a.navbar-brand .logo {
+    height: 40px;
+    float: left;
+  }
+  body.itvitality .navbar-brand {
+    font-size: 1.5ex;
+    height: 40px;
+    padding: 6px 10px;
+  }
+  body.itvitality a.navbar-brand .logo-label {
+    display: none;
+  }
+
+  body.itvitality .navbar .navbar-nav img.facebook {
+    width: 30px;
+    margin-top: -6px;
+  }
+}
+
+
+
+body.itvitality p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+body.itvitality h1 {
+  font-family: 'PT Serif', sans-serif;
+}
+
+body.itvitality h2 {
+  font-family: 'PT Serif', sans-serif;
+}

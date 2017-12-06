@@ -20,6 +20,14 @@ def blog(request):
     context = {'articles': articles[:6]}
     return render(request, 'person_site/blogs.html', context)
 
+def cv( request ):
+    context = {'label': 'Тесты'}
+    return render(request, 'person_site/cv.html', context)
+
+def projects( request ):
+    context = {'label': 'Тесты'}
+    return render(request, 'person_site/projects.html', context)
+
 
 @login_required
 def articles(request):
