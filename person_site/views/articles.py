@@ -3,31 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-from .forms import ArticleForm
-from .models import Article
-
-# Create your views here.
-
-
-def index(request):
-    articles = Article.objects.order_by('date_added')
-    context = {'articles': articles[:6]}
-    return render(request, 'person_site/index.html', context)
-
-
-def blog(request):
-    articles = Article.objects.order_by('date_added')
-    context = {'articles': articles[:6]}
-    return render(request, 'person_site/blogs.html', context)
-
-def cv( request ):
-    context = {'label': 'Тесты'}
-    return render(request, 'person_site/cv.html', context)
-
-def projects( request ):
-    context = {'label': 'Тесты'}
-    return render(request, 'person_site/projects.html', context)
-
+from person_site.forms import ArticleForm
+from person_site.models import Article
 
 @login_required
 def articles(request):
